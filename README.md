@@ -1,79 +1,71 @@
-# 🕹️ Arkad Games — El Portal de Juegos Definitivo
+# Arkad Games — Catálogo de Juegos Gratuitos
 
 ![Arkad Games Banner](./public/assets/img/banner.png)
 
-> **"Donde el gaming gratuito se encuentra con el diseño de vanguardia."**
-
-Bienvenido a **Arkad Games**, una plataforma ultra-rápida y visualmente impactante construida con las tecnologías más modernas de la web. Aquí no solo jugamos; creamos una experiencia inmersiva neón.
+Arkad Games es una plataforma moderna diseñada para explorar y descubrir juegos gratuitos para PC y navegador. El proyecto prioriza el rendimiento, la accesibilidad y un sistema de diseño consistente.
 
 ---
 
-## ✨ Características Premium
+## Características Principales
 
-- **🚀 Rendimiento Extremo**: Construido sobre **Next.js 15+** con **React 19**, aprovechando *Server Components* para una carga instantánea.
-- **🎨 Diseño Cyberpunk**: Interfaz inmersiva usando **Tailwind CSS v4** con un sistema de diseño basado en tokens neón.
-- **📱 Experiencia Fluida**: Animaciones optimizadas por GPU y transiciones suaves para una navegación de lujo.
-- **🎮 Catálogo Inteligente**: Filtrado y búsqueda en tiempo real de más de 500 títulos gratuitos.
-- **🔐 Auth Segura**: Integración con **Supabase Auth** para perfiles de usuario y persistencia.
+- **Arquitectura de Servidor**: Implementación con Next.js 15 para optimizar el tiempo de carga y el SEO mediante Server Components.
+- **Sistema de Diseño**: Estilizado con Tailwind CSS v4, utilizando variables nativas de CSS para una gestión de temas eficiente.
+- **Interactividad**: Filtros en tiempo real y paginación optimizada para una navegación fluida.
+- **Autenticación**: Integración con Supabase para la gestión segura de perfiles de usuario.
 
 ---
 
-## 🛠️ Stack Tecnológico (Nivel Experto)
+## Tecnologías Utilizadas
 
-Este proyecto no es solo un sitio web; es una demostración de ingeniería moderna:
-
-| Tecnología | Propósito | ¿Por qué? |
+| Tecnología | Función | Justificación |
 | :--- | :--- | :--- |
-| **Next.js (App Router)** | Framework | Renderizado híbrido (SSR/ISR) para SEO y velocidad. |
-| **Tailwind CSS v4** | Estilado | Sistema de diseño basado en CSS-variables, evitando clases "sucias". |
-| **TypeScript** | Lenguaje | Seguridad de tipos y autocompletado profesional. |
-| **Supabase** | Backend-as-a-Service | Autenticación y base de datos en tiempo real sin fricción. |
-| **Lucide React** | Iconografía | Iconos vectoriales limpios y consistentes. |
+| **Next.js** | Framework Core | Renderizado eficiente y manejo de rutas escalable. |
+| **Tailwind CSS v4** | Interfaz | Estilos declarativos sin código CSS redundante. |
+| **TypeScript** | Lenguaje | Robustez en el desarrollo y prevención de errores en tiempo de compilación. |
+| **Supabase** | Backend | Solución integral para bases de datos y autenticación. |
 
 ---
 
-## 🏗️ Arquitectura del Proyecto
+## Estructura del Proyecto
 
-Para mantener el orden y la escalabilidad, seguimos un patrón de **Separación de Responsabilidades**:
+El código está organizado siguiendo principios de modularidad:
 
-- `/src/app`: Rutas y lógica de servidor (SEO-ready).
-- `/src/components/ui`: Componentes visuales atómicos y reutilizables.
-- `/src/components/layout`: Estructura global (Navbar, Footer).
-- `/src/context`: Gestión de estado global (Autenticación).
-- `/src/lib`: Utilidades y llamadas a APIs externas.
+- `src/app`: Definición de rutas y lógica de componentes de servidor.
+- `src/components/ui`: Componentes de interfaz reutilizables.
+- `src/components/layout`: Componentes globales de estructura (Navbar, Footer).
+- `src/context`: Manejo del estado global de la aplicación.
+- `src/lib`: Lógica de integración con APIs y utilidades de terceros.
 
 ---
 
-## 🚀 Guía de Inicio Rápido
+## Instalación y Desarrollo
 
-### 1. Clonar y Preparar
+### 1. Requisitos Previos
+Clona el repositorio e instala las dependencias:
 ```bash
-git clone https://github.com/tu-usuario/arkad-games.git
+git clone https://github.com/borosdemir/arkad-games.git
 cd arkad-games
 npm install
 ```
 
-### 2. Configurar el Entorno
-Crea un archivo `.env.local` con tus credenciales de Supabase:
+### 2. Variables de Entorno
+Configura un archivo `.env.local` con las credenciales de tu proyecto Supabase:
 ```env
 NEXT_PUBLIC_SUPABASE_URL=tu_url
 NEXT_PUBLIC_SUPABASE_ANON_KEY=tu_key
 ```
 
-### 3. ¡A Jugar!
+### 3. Ejecución
+Inicia el servidor de desarrollo:
 ```bash
 npm run dev
 ```
 
 ---
 
-## 📜 Filosofía de Código
+## Estándares de Código
 
-Nos esforzamos por un código **"Pulido y Profesional"**:
-1. **No hay estilos en línea**: Todo se gestiona vía Tailwind tokens.
-2. **Componentes Puros**: Separamos la lógica de cliente de los componentes de servidor.
-3. **Documentación Viva**: Comentamos el *porqué* de las decisiones, no solo el *qué*.
-
----
-
-Desarrollado con ❤️ por el equipo de **Arkad Games**.
+Para asegurar la mantenibilidad del proyecto, seguimos estos criterios:
+1. **Tokens de Diseño**: Se prohíbe el uso de estilos en línea o valores arbitrarios en el TSX; todo debe referenciar al tema central.
+2. **Separación de Lógica**: Los componentes de cliente se mantienen ligeros, delegando la carga de datos al servidor siempre que sea posible.
+3. **Documentación Técnica**: Cada módulo crítico incluye comentarios sobre su propósito y funcionamiento interno.
