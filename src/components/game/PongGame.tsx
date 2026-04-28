@@ -371,9 +371,9 @@ export default function PongGame() {
     <div className="flex flex-col items-center gap-6">
       {/* Marcador */}
       <div className="flex items-center gap-8 text-xl font-bold">
-        <span className="text-[#00f0ff]">TÚ: {playerScore}</span>
+        <span className="text-neon-blue">TÚ: {playerScore}</span>
         <span className="text-zinc-500">vs</span>
-        <span className="text-[#ff00ea]">CPU: {cpuScore}</span>
+        <span className="text-neon-pink">CPU: {cpuScore}</span>
       </div>
 
       {/* Canvas del juego */}
@@ -382,8 +382,7 @@ export default function PongGame() {
           ref={canvasRef}
           width={CANVAS_WIDTH}
           height={CANVAS_HEIGHT}
-          className="block max-w-full"
-          style={{ imageRendering: "pixelated" }}
+          className="block max-w-full [image-rendering:pixelated]"
         />
 
         {/* Overlay de game over */}
@@ -397,7 +396,7 @@ export default function PongGame() {
             </p>
             <button
               onClick={startGame}
-              className="mt-6 rounded-full bg-[#b026ff] px-8 py-3 text-sm font-bold text-white transition-all hover:bg-[#9b1fe0] hover:shadow-[0_0_20px_rgba(176,38,255,0.4)]"
+              className="mt-6 rounded-full bg-neon-purple px-8 py-3 text-sm font-bold text-white transition-all hover:bg-neon-purple/80 hover:shadow-[0_0_20px_rgba(176,38,255,0.4)]"
             >
               Jugar de nuevo
             </button>

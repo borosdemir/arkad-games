@@ -122,7 +122,11 @@ export default function CatalogoClient({
         {(genre || platform || search) && (
           <button
             onClick={() => { setGenre(""); setPlatform(""); setSearch(""); setPage(1); }}
-            className="inline-flex items-center gap-1 rounded-full border border-white/10 px-3 py-1 text-xs font-medium text-[#00f0ff] transition-all hover:bg-[#00f0ff]/10 hover:border-[#00f0ff]/30 active:scale-95"
+            className="
+              inline-flex items-center gap-1 rounded-full border border-white/10
+              px-3 py-1 text-xs font-medium text-neon-blue transition-all
+              hover:bg-neon-blue/10 hover:border-neon-blue/30 active:scale-95
+            "
           >
             ✕ Limpiar filtros
           </button>
@@ -154,7 +158,12 @@ export default function CatalogoClient({
           <button
             onClick={() => { setPage((p) => Math.max(1, p - 1)); window.scrollTo({ top: 0, behavior: 'smooth' }); }}
             disabled={page === 1}
-            className="rounded-lg border border-white/10 px-4 py-2.5 text-sm font-medium text-zinc-400 transition-all duration-300 hover:text-white hover:border-white/20 hover:bg-white/5 disabled:opacity-30 disabled:cursor-not-allowed active:scale-95"
+            className="
+              rounded-lg border border-white/10 px-4 py-2.5 text-sm font-medium
+              text-zinc-400 transition-all duration-300
+              hover:text-white hover:border-white/20 hover:bg-white/5
+              disabled:opacity-30 disabled:cursor-not-allowed active:scale-95
+            "
           >
             ← Anterior
           </button>
@@ -177,11 +186,14 @@ export default function CatalogoClient({
               <button
                 key={pageNum}
                 onClick={() => setPage(pageNum)}
-                className={`flex h-9 w-9 items-center justify-center rounded-lg text-sm font-medium transition-colors ${
-                  page === pageNum
-                    ? "bg-[#b026ff] text-white"
-                    : "text-zinc-400 hover:text-white hover:bg-white/5"
-                }`}
+                className={`
+                  flex h-9 w-9 items-center justify-center rounded-lg text-sm font-medium transition-colors
+                  ${
+                    page === pageNum
+                      ? "bg-neon-purple text-white shadow-[0_0_15px_rgba(176,38,255,0.3)]"
+                      : "text-zinc-400 hover:text-white hover:bg-white/5"
+                  }
+                `}
               >
                 {pageNum}
               </button>
@@ -191,12 +203,18 @@ export default function CatalogoClient({
           <button
             onClick={() => { setPage((p) => Math.min(totalPages, p + 1)); window.scrollTo({ top: 0, behavior: 'smooth' }); }}
             disabled={page === totalPages}
-            className="rounded-lg border border-white/10 px-4 py-2.5 text-sm font-medium text-zinc-400 transition-all duration-300 hover:text-white hover:border-white/20 hover:bg-white/5 disabled:opacity-30 disabled:cursor-not-allowed active:scale-95"
+            className="
+              rounded-lg border border-white/10 px-4 py-2.5 text-sm font-medium
+              text-zinc-400 transition-all duration-300
+              hover:text-white hover:border-white/20 hover:bg-white/5
+              disabled:opacity-30 disabled:cursor-not-allowed active:scale-95
+            "
           >
             Siguiente →
           </button>
         </div>
       )}
+
     </>
   );
 }

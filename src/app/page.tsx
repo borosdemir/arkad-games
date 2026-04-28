@@ -29,25 +29,18 @@ export default async function Home() {
       >
         {/* Efectos de fondo — decorativos (no afectan rendimiento: GPU-accelerated) */}
         <div aria-hidden="true" className="pointer-events-none absolute inset-0">
-          <div className="absolute -top-40 -left-40 h-[500px] w-[500px] rounded-full bg-[#b026ff]/10 blur-[120px] animate-glow-pulse" />
-          <div className="absolute -bottom-40 -right-40 h-[400px] w-[400px] rounded-full bg-[#00f0ff]/8 blur-[100px]" />
-          <div
-            className="absolute inset-0 opacity-[0.025]"
-            style={{
-              backgroundImage:
-                "linear-gradient(rgba(255,255,255,.1) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.1) 1px,transparent 1px)",
-              backgroundSize: "60px 60px",
-            }}
-          />
+          <div className="absolute -top-40 -left-40 h-[500px] w-[500px] rounded-full bg-neon-purple/10 blur-[120px] animate-glow-pulse" />
+          <div className="absolute -bottom-40 -right-40 h-[400px] w-[400px] rounded-full bg-neon-blue/8 blur-[100px]" />
+          <div className="bg-grid-white absolute inset-0 opacity-[0.025] [background-size:60px_60px]" />
         </div>
 
         {/* Contenido del Hero */}
         <div className="relative mx-auto max-w-4xl text-center">
           {/* Badge animado */}
-          <div className="animate-fade-in-down mx-auto mb-6 inline-flex items-center gap-2 rounded-full border border-[#b026ff]/30 bg-[#b026ff]/10 px-4 py-1.5 text-sm text-[#d580ff] backdrop-blur-sm">
+          <div className="animate-fade-in-down mx-auto mb-6 inline-flex items-center gap-2 rounded-full border border-neon-purple/30 bg-neon-purple/10 px-4 py-1.5 text-sm text-neon-purple backdrop-blur-sm">
             <span className="relative flex h-2 w-2">
-              <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-[#b026ff] opacity-75" />
-              <span className="relative inline-flex h-2 w-2 rounded-full bg-[#b026ff]" />
+              <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-neon-purple opacity-75" />
+              <span className="relative inline-flex h-2 w-2 rounded-full bg-neon-purple" />
             </span>
             +500 juegos gratuitos disponibles
           </div>
@@ -58,31 +51,24 @@ export default async function Home() {
             className="animate-fade-in-up text-4xl font-extrabold leading-[1.1] tracking-tight text-white sm:text-5xl lg:text-7xl"
           >
             Descubre una nueva{" "}
-            <span className="bg-gradient-to-r from-[#b026ff] via-[#00f0ff] to-[#ff00ea] bg-clip-text text-transparent animate-fade-in">
+            <span className="bg-gradient-to-r from-neon-purple via-neon-blue to-neon-pink bg-clip-text text-transparent animate-fade-in">
               forma de jugar
             </span>
           </h1>
 
           {/* Subtítulo — keyword-rich para SEO */}
-          <p className="animate-fade-in-up mx-auto mt-6 max-w-2xl text-lg leading-relaxed text-zinc-400" style={{ animationDelay: "200ms" }}>
+          <p className="animate-fade-in-up mx-auto mt-6 max-w-2xl text-lg leading-relaxed text-zinc-400 [animation-delay:200ms]">
             Explora cientos de juegos gratuitos para PC y navegador.
             Desde shooters épicos hasta MMORPGs masivos,
             encuentra tu próxima aventura sin gastar un centavo.
           </p>
 
           {/* CTAs con micro-animaciones */}
-          <div className="animate-fade-in-up mt-10 flex flex-col items-center gap-4 sm:flex-row sm:justify-center" style={{ animationDelay: "400ms" }}>
+          <div className="animate-fade-in-up mt-10 flex flex-col items-center gap-4 sm:flex-row sm:justify-center [animation-delay:400ms]">
             <Link
               href="/catalogo"
               id="cta-explore"
-              className="
-                group inline-flex items-center gap-2.5 rounded-full
-                bg-[#b026ff] px-8 py-4 text-base font-bold text-white
-                transition-all duration-300
-                hover:bg-[#9b1fe0] hover:shadow-[0_0_40px_rgba(176,38,255,0.5)]
-                hover:scale-105
-                active:scale-95
-              "
+              className="btn-primary"
             >
               Explorar catálogo
               <svg
@@ -96,21 +82,14 @@ export default async function Home() {
             <Link
               href="/generos"
               id="cta-genres"
-              className="
-                group inline-flex items-center gap-2 rounded-full
-                border border-white/10 px-8 py-4 text-base font-semibold text-zinc-300
-                transition-all duration-300
-                hover:border-[#00f0ff]/40 hover:text-white hover:bg-white/5
-                hover:shadow-[0_0_20px_rgba(0,240,255,0.1)]
-                active:scale-95
-              "
+              className="btn-secondary"
             >
               🏷️ Ver por géneros
             </Link>
           </div>
 
           {/* Stats sociales — social proof para conversión */}
-          <div className="animate-fade-in mt-14 flex items-center justify-center gap-8 sm:gap-12" style={{ animationDelay: "600ms" }}>
+          <div className="animate-fade-in mt-14 flex items-center justify-center gap-8 sm:gap-12 [animation-delay:600ms]">
             {[
               { value: "500+", label: "Juegos gratis" },
               { value: "10+", label: "Géneros" },
@@ -137,34 +116,29 @@ export default async function Home() {
           id="cyberpong-banner"
           className="
             group relative block overflow-hidden rounded-3xl
-            border border-[#00f0ff]/20 bg-gradient-to-br from-[#0a0a1a] via-[#12121f] to-[#0d0d18]
+            border border-neon-blue/20 bg-gradient-to-br from-[#0a0a1a] via-[#12121f] to-[#0d0d18]
             p-8 sm:p-10
             transition-all duration-500
-            hover:border-[#00f0ff]/50
+            hover:border-neon-blue/50
             hover:shadow-[0_0_60px_rgba(0,240,255,0.12),0_0_120px_rgba(176,38,255,0.08)]
           "
         >
           {/* Decorative grid */}
           <div
             aria-hidden="true"
-            className="pointer-events-none absolute inset-0 opacity-[0.04]"
-            style={{
-              backgroundImage:
-                "linear-gradient(rgba(0,240,255,.3) 1px,transparent 1px),linear-gradient(90deg,rgba(0,240,255,.3) 1px,transparent 1px)",
-              backgroundSize: "40px 40px",
-            }}
+            className="bg-grid-neon pointer-events-none absolute inset-0 opacity-[0.04] [background-size:40px_40px]"
           />
           {/* Glow blobs */}
-          <div aria-hidden="true" className="pointer-events-none absolute -right-20 -top-20 h-60 w-60 rounded-full bg-[#00f0ff]/10 blur-[80px] transition-all duration-700 group-hover:bg-[#00f0ff]/20" />
-          <div aria-hidden="true" className="pointer-events-none absolute -left-10 -bottom-10 h-40 w-40 rounded-full bg-[#b026ff]/10 blur-[60px]" />
+          <div aria-hidden="true" className="pointer-events-none absolute -right-20 -top-20 h-60 w-60 rounded-full bg-neon-blue/10 blur-[80px] transition-all duration-700 group-hover:bg-neon-blue/20" />
+          <div aria-hidden="true" className="pointer-events-none absolute -left-10 -bottom-10 h-40 w-40 rounded-full bg-neon-purple/10 blur-[60px]" />
 
           <div className="relative flex flex-col items-center gap-6 sm:flex-row sm:items-center sm:justify-between">
             {/* Left content */}
             <div className="text-center sm:text-left">
-              <div className="mb-3 inline-flex items-center gap-2 rounded-full border border-[#00f0ff]/30 bg-[#00f0ff]/10 px-3 py-1 text-xs font-semibold text-[#00f0ff]">
+              <div className="mb-3 inline-flex items-center gap-2 rounded-full border border-neon-blue/30 bg-neon-blue/10 px-3 py-1 text-xs font-semibold text-neon-blue">
                 <span className="relative flex h-1.5 w-1.5">
-                  <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-[#00f0ff] opacity-75" />
-                  <span className="relative inline-flex h-1.5 w-1.5 rounded-full bg-[#00f0ff]" />
+                  <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-neon-blue opacity-75" />
+                  <span className="relative inline-flex h-1.5 w-1.5 rounded-full bg-neon-blue" />
                 </span>
                 JUEGA AHORA
               </div>
@@ -181,7 +155,7 @@ export default async function Home() {
             <div className="flex-shrink-0">
               <span className="
                 inline-flex items-center gap-2 rounded-full
-                bg-[#00f0ff] px-8 py-4 text-base font-bold text-black
+                bg-neon-blue px-8 py-4 text-base font-bold text-black
                 transition-all duration-300
                 group-hover:shadow-[0_0_30px_rgba(0,240,255,0.5)]
                 group-hover:scale-105
@@ -217,7 +191,7 @@ export default async function Home() {
             href="/catalogo"
             className="
               group inline-flex items-center gap-1.5
-              text-sm font-semibold text-[#00f0ff]
+              text-sm font-semibold text-neon-blue
               transition-all duration-300 hover:gap-2.5
             "
           >
@@ -244,12 +218,13 @@ export default async function Home() {
               border border-white/10 px-8 py-3.5
               text-sm font-semibold text-zinc-300
               transition-all duration-300
-              hover:border-[#b026ff]/40 hover:text-white hover:bg-[#b026ff]/5
+              hover:border-neon-purple/40 hover:text-white hover:bg-neon-purple/5
             "
           >
             Explorar los +500 juegos disponibles →
           </Link>
         </div>
+
       </section>
     </>
   );

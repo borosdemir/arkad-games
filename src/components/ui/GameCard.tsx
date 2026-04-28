@@ -31,9 +31,9 @@ export default function GameCard({ game }: GameCardProps) {
       id={`game-card-${game.id}`}
       className="
         group relative flex flex-col overflow-hidden rounded-2xl
-        bg-[#18181b]/80 border border-white/[0.06]
+        bg-dark-card/80 border border-white/[0.06]
         transition-all duration-500 ease-out
-        hover:border-[#b026ff]/50
+        hover:border-neon-purple/50
         hover:shadow-[0_8px_40px_rgba(176,38,255,0.2),0_0_0_1px_rgba(176,38,255,0.1)]
         hover:-translate-y-2 hover:scale-[1.02]
         animate-fade-in-up
@@ -67,7 +67,7 @@ export default function GameCard({ game }: GameCardProps) {
           "
         />
         {/* Gradiente para legibilidad */}
-        <div className="absolute inset-0 bg-gradient-to-t from-[#18181b] via-[#18181b]/20 to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-t from-dark-bg via-dark-bg/20 to-transparent" />
 
         {/* Badge "FREE" flotante */}
         <span className="
@@ -88,19 +88,19 @@ export default function GameCard({ game }: GameCardProps) {
         <div className="flex flex-wrap items-center gap-2">
           <span className="
             inline-flex items-center gap-1 rounded-lg
-            bg-[#b026ff]/10 border border-[#b026ff]/20
-            px-2.5 py-1 text-[11px] font-semibold text-[#d580ff]
+            bg-neon-purple/10 border border-neon-purple/20
+            px-2.5 py-1 text-[11px] font-semibold text-neon-purple
             transition-all duration-300
-            group-hover:bg-[#b026ff]/20 group-hover:border-[#b026ff]/40
+            group-hover:bg-neon-purple/20 group-hover:border-neon-purple/40
           ">
             {game.genre}
           </span>
           <span className="
             inline-flex items-center gap-1 rounded-lg
-            bg-[#00f0ff]/8 border border-[#00f0ff]/15
-            px-2.5 py-1 text-[11px] font-semibold text-[#00f0ff]/90
+            bg-neon-blue/8 border border-neon-blue/15
+            px-2.5 py-1 text-[11px] font-semibold text-neon-blue/90
             transition-all duration-300
-            group-hover:bg-[#00f0ff]/15 group-hover:border-[#00f0ff]/30
+            group-hover:bg-neon-blue/15 group-hover:border-neon-blue/30
           ">
             {getPlatformIcon(game.platform)} {game.platform}
           </span>
@@ -110,7 +110,8 @@ export default function GameCard({ game }: GameCardProps) {
         <h3 className="
           text-[17px] font-bold text-white leading-snug line-clamp-1
           transition-all duration-300
-          group-hover:text-[#e8d5ff]
+          group-hover:text-neon-purple/20
+          hover:text-neon-purple
         ">
           {game.title}
         </h3>
@@ -129,7 +130,7 @@ export default function GameCard({ game }: GameCardProps) {
           mt-auto flex items-center justify-between
           pt-3 border-t border-white/[0.04]
           transition-all duration-300
-          group-hover:border-[#b026ff]/10
+          group-hover:border-neon-purple/10
         ">
           <span className="text-xs text-zinc-600 truncate max-w-[55%] transition-colors group-hover:text-zinc-500">
             {game.developer}
@@ -138,7 +139,7 @@ export default function GameCard({ game }: GameCardProps) {
           {/* CTA animado */}
           <span className="
             flex items-center gap-1
-            text-xs font-bold text-[#00f0ff]
+            text-xs font-bold text-neon-blue
             translate-x-2 opacity-0
             transition-all duration-300 ease-out
             group-hover:translate-x-0 group-hover:opacity-100
@@ -150,6 +151,7 @@ export default function GameCard({ game }: GameCardProps) {
           </span>
         </div>
       </div>
+
     </Link>
   );
 }

@@ -35,7 +35,7 @@ export default function Navbar() {
     <header id="main-navbar" className="glass sticky top-0 z-50 w-full">
       <nav className="mx-auto flex h-16 max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
         {/* ── Logo ── */}
-        <Link href="/" className="flex items-center gap-2 group">
+        <Link href="/" className="group flex items-center gap-2">
           <svg
             width="32"
             height="32"
@@ -43,15 +43,15 @@ export default function Navbar() {
             fill="none"
             className="transition-transform duration-300 group-hover:rotate-12"
           >
-            <rect x="4" y="10" width="24" height="14" rx="7" className="fill-[#b026ff]" />
+            <rect x="4" y="10" width="24" height="14" rx="7" className="fill-neon-purple" />
             <rect x="10" y="15" width="6" height="2" rx="1" fill="white" />
             <rect x="12" y="13" width="2" height="6" rx="1" fill="white" />
-            <circle cx="22" cy="15" r="1.5" fill="#00f0ff" />
-            <circle cx="25" cy="17" r="1.5" fill="#ff00ea" />
+            <circle cx="22" cy="15" r="1.5" className="fill-neon-blue" />
+            <circle cx="25" cy="17" r="1.5" className="fill-neon-pink" />
           </svg>
           <span className="text-xl font-bold tracking-tight">
             <span className="text-white">ARKAD</span>
-            <span className="text-[#b026ff]"> GAMES</span>
+            <span className="text-neon-purple"> GAMES</span>
           </span>
         </Link>
 
@@ -61,11 +61,14 @@ export default function Navbar() {
             <li key={link.href}>
               <Link
                 href={link.href}
-                className={`rounded-lg px-3 py-2 text-sm font-medium transition-all duration-300 ${
-                  "special" in link && link.special
-                    ? "text-[#00f0ff] hover:text-white hover:bg-[#00f0ff]/10 hover:shadow-[0_0_15px_rgba(0,240,255,0.15)]"
-                    : "text-zinc-400 hover:text-white hover:bg-white/5"
-                }`}
+                className={`
+                  rounded-lg px-3 py-2 text-sm font-medium transition-all duration-300
+                  ${
+                    "special" in link && link.special
+                      ? "text-neon-blue hover:bg-neon-blue/10 hover:text-white hover:shadow-[0_0_15px_rgba(0,240,255,0.15)]"
+                      : "text-zinc-400 hover:bg-white/5 hover:text-white"
+                  }
+                `}
               >
                 {link.icon && <span className="mr-1">{link.icon}</span>}
                 {link.label}
@@ -75,20 +78,17 @@ export default function Navbar() {
         </ul>
 
         {/* ── Zona de usuario (desktop) ── */}
-        <div className="hidden sm:flex items-center gap-3">
+        <div className="hidden items-center gap-3 sm:flex">
           {loading ? (
-            // Skeleton de carga mientras verificamos la sesión
             <div className="h-9 w-24 animate-pulse rounded-full bg-white/10" />
           ) : user ? (
-            // ── Usuario logueado: avatar + menú dropdown ──
             <div className="relative">
               <button
                 id="user-menu-btn"
                 onClick={() => setUserMenuOpen(!userMenuOpen)}
                 className="flex items-center gap-2 rounded-full border border-white/10 px-3 py-1.5 text-sm font-medium text-white transition-colors hover:bg-white/5"
               >
-                {/* Avatar con la inicial del nombre */}
-                <span className="flex h-7 w-7 items-center justify-center rounded-full bg-[#b026ff] text-xs font-bold text-white">
+                <span className="flex h-7 w-7 items-center justify-center rounded-full bg-neon-purple text-xs font-bold text-white">
                   {displayName.charAt(0).toUpperCase()}
                 </span>
                 {displayName}
@@ -105,9 +105,8 @@ export default function Navbar() {
                 </svg>
               </button>
 
-              {/* Dropdown menu */}
               {userMenuOpen && (
-                <div className="absolute right-0 mt-2 w-48 rounded-xl border border-white/10 bg-[#18181b] py-1 shadow-xl">
+                <div className="absolute right-0 mt-2 w-48 rounded-xl border border-white/10 bg-dark-card py-1 shadow-xl">
                   <Link
                     href="/minijuego"
                     onClick={() => setUserMenuOpen(false)}
@@ -129,7 +128,6 @@ export default function Navbar() {
               )}
             </div>
           ) : (
-            // ── No logueado: botones de login/registro ──
             <div className="flex items-center gap-2">
               <Link
                 href="/login"
@@ -139,13 +137,14 @@ export default function Navbar() {
               </Link>
               <Link
                 href="/registro"
-                className="rounded-full bg-[#b026ff] px-5 py-2 text-sm font-semibold text-white transition-all duration-300 hover:bg-[#9b1fe0] hover:shadow-[0_0_20px_rgba(176,38,255,0.4)]"
+                className="rounded-full bg-neon-purple px-5 py-2 text-sm font-semibold text-white transition-all duration-300 hover:bg-neon-purple/80 hover:shadow-[0_0_20px_rgba(176,38,255,0.4)]"
               >
                 Registrarse
               </Link>
             </div>
           )}
         </div>
+
 
         {/* ── Botón hamburguesa (móvil) ── */}
         <button
