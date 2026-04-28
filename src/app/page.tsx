@@ -107,35 +107,26 @@ export default async function Home() {
           </div>
         </div>
       </section>
-      {/* ════════════════════════════════════════════════════════
-          SECCIÓN 2: BANNER CYBER PONG — Prominente y fácil de encontrar
-          ════════════════════════════════════════════════════════ */}
+      {/* ── SECCIÓN 2: BANNER CYBER PONG ── */}
       <section className="mx-auto max-w-7xl px-4 pb-16 sm:px-6 lg:px-8">
         <Link
           href="/minijuego"
           id="cyberpong-banner"
           className="
-            group relative block overflow-hidden rounded-3xl
-            border border-neon-blue/20 bg-gradient-to-br from-[#0a0a1a] via-[#12121f] to-[#0d0d18]
-            p-8 sm:p-10
-            transition-all duration-500
-            hover:border-neon-blue/50
-            hover:shadow-[0_0_60px_rgba(0,240,255,0.12),0_0_120px_rgba(176,38,255,0.08)]
+            group banner-card border-neon-blue/20 bg-gradient-to-br from-[#0a0a1a] via-[#12121f] to-[#0d0d18]
+            hover:border-neon-blue/50 hover:shadow-[0_0_60px_rgba(0,240,255,0.12),0_0_120px_rgba(176,38,255,0.08)]
           "
         >
           {/* Decorative grid */}
-          <div
-            aria-hidden="true"
-            className="bg-grid-neon pointer-events-none absolute inset-0 opacity-[0.04] [background-size:40px_40px]"
-          />
+          <div aria-hidden="true" className="bg-grid-neon pointer-events-none absolute inset-0 opacity-[0.04] [background-size:40px_40px]" />
+          
           {/* Glow blobs */}
           <div aria-hidden="true" className="pointer-events-none absolute -right-20 -top-20 h-60 w-60 rounded-full bg-neon-blue/10 blur-[80px] transition-all duration-700 group-hover:bg-neon-blue/20" />
           <div aria-hidden="true" className="pointer-events-none absolute -left-10 -bottom-10 h-40 w-40 rounded-full bg-neon-purple/10 blur-[60px]" />
 
           <div className="relative flex flex-col items-center gap-6 sm:flex-row sm:items-center sm:justify-between">
-            {/* Left content */}
             <div className="text-center sm:text-left">
-              <div className="mb-3 inline-flex items-center gap-2 rounded-full border border-neon-blue/30 bg-neon-blue/10 px-3 py-1 text-xs font-semibold text-neon-blue">
+              <div className="badge-neon border-neon-blue/30 bg-neon-blue/10 text-neon-blue">
                 <span className="relative flex h-1.5 w-1.5">
                   <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-neon-blue opacity-75" />
                   <span className="relative inline-flex h-1.5 w-1.5 rounded-full bg-neon-blue" />
@@ -147,19 +138,12 @@ export default async function Home() {
               </h2>
               <p className="mt-2 max-w-lg text-zinc-400 leading-relaxed">
                 Un clásico reinventado con estética cyberpunk. Partículas neón,
-                efectos de brillo y una IA desafiante. ¿Puedes llegar a 7 primero?
+                efectos de brillo y una IA desafiante.
               </p>
             </div>
 
-            {/* Right CTA */}
             <div className="flex-shrink-0">
-              <span className="
-                inline-flex items-center gap-2 rounded-full
-                bg-neon-blue px-8 py-4 text-base font-bold text-black
-                transition-all duration-300
-                group-hover:shadow-[0_0_30px_rgba(0,240,255,0.5)]
-                group-hover:scale-105
-              ">
+              <span className="btn-primary bg-neon-blue text-black hover:bg-neon-blue/90 hover:shadow-[0_0_30px_rgba(0,240,255,0.5)]">
                 Jugar ahora
                 <svg width="18" height="18" viewBox="0 0 16 16" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" className="transition-transform group-hover:translate-x-1">
                   <path d="M3 8h10M9 4l4 4-4 4" />
@@ -169,6 +153,55 @@ export default async function Home() {
           </div>
         </Link>
       </section>
+
+      {/* ── SECCIÓN: BANNER DOOM ── */}
+      <section className="mx-auto max-w-7xl px-4 pb-16 sm:px-6 lg:px-8">
+        <Link
+          href="/doom"
+          id="doom-banner"
+          className="
+            group banner-card border-neon-purple/20 bg-gradient-to-br from-[#1a0a0a] via-[#1f1212] to-[#180d0d]
+            hover:border-neon-purple/50 hover:shadow-[0_0_60px_rgba(176,38,255,0.12),0_0_120px_rgba(255,0,234,0.08)]
+          "
+        >
+          {/* Decorative grid */}
+          <div aria-hidden="true" className="bg-grid-white pointer-events-none absolute inset-0 opacity-[0.03] [background-size:40px_40px]" />
+          
+          {/* Glow blobs */}
+          <div aria-hidden="true" className="pointer-events-none absolute -right-20 -top-20 h-60 w-60 rounded-full bg-neon-purple/10 blur-[80px] transition-all duration-700 group-hover:bg-neon-purple/20" />
+          <div aria-hidden="true" className="pointer-events-none absolute -left-10 -bottom-10 h-40 w-40 rounded-full bg-neon-pink/10 blur-[60px]" />
+
+          <div className="relative flex flex-col items-center gap-6 sm:flex-row sm:items-center sm:justify-between">
+            <div className="text-center sm:text-left">
+              <div className="badge-neon border-neon-purple/30 bg-neon-purple/10 text-neon-purple">
+                <span className="relative flex h-1.5 w-1.5">
+                  <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-neon-purple opacity-75" />
+                  <span className="relative inline-flex h-1.5 w-1.5 rounded-full bg-neon-purple" />
+                </span>
+                LEGACY CLASSIC
+              </div>
+              <h2 className="text-2xl font-extrabold text-white sm:text-3xl lg:text-4xl">
+                🔫 DOOM (1993)
+              </h2>
+              <p className="mt-2 max-w-lg text-zinc-400 leading-relaxed">
+                El FPS que lo cambió todo. Revive la experiencia original 
+                con sonido y fluidez perfecta desde tu navegador.
+              </p>
+            </div>
+
+            <div className="flex-shrink-0">
+              <span className="btn-primary">
+                Jugar Doom
+                <svg width="18" height="18" viewBox="0 0 16 16" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" className="transition-transform group-hover:translate-x-1">
+                  <path d="M3 8h10M9 4l4 4-4 4" />
+                </svg>
+              </span>
+            </div>
+          </div>
+        </Link>
+      </section>
+
+
 
       {/* ════════════════════════════════════════════════════════
           SECCIÓN 3: JUEGOS DESTACADOS

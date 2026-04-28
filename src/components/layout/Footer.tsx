@@ -87,7 +87,7 @@ export default function Footer() {
           <div className="col-span-2 md:col-span-1">
             <span className="text-xl font-bold tracking-tight">
               <span className="text-white">ARKAD</span>
-              <span className="text-[#b026ff]"> GAMES</span>
+              <span className="text-neon-purple"> GAMES</span>
             </span>
             <p className="mt-3 text-sm leading-relaxed text-zinc-500">
               Tu portal definitivo de juegos gratuitos.
@@ -100,7 +100,7 @@ export default function Footer() {
                   key={social.label}
                   href={social.href}
                   aria-label={social.label}
-                  className="rounded-lg p-2 text-zinc-500 transition-colors hover:text-[#b026ff] hover:bg-white/5"
+                  className="rounded-lg p-2 text-zinc-500 transition-colors hover:text-neon-purple hover:bg-white/5"
                 >
                   {social.icon}
                 </a>
@@ -119,7 +119,7 @@ export default function Footer() {
                   <li key={link.href}>
                     <Link
                       href={link.href}
-                      className="text-sm text-zinc-500 transition-colors hover:text-[#00f0ff]"
+                      className="text-sm text-zinc-500 transition-colors hover:text-neon-blue"
                     >
                       {link.label}
                     </Link>
@@ -139,7 +139,7 @@ export default function Footer() {
               href="https://www.freetogame.com"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-zinc-500 hover:text-[#00f0ff] transition-colors"
+              className="text-zinc-500 hover:text-neon-blue transition-colors"
             >
               FreeToGame.com
             </a>

@@ -1,71 +1,71 @@
-# Arkad Games — Catálogo de Juegos Gratuitos
+# 🕹️ Arkad Games — Plataforma de Juegos Retro & Modernos
 
-![Arkad Games Banner](./public/assets/img/banner.png)
-
-Arkad Games es una plataforma moderna diseñada para explorar y descubrir juegos gratuitos para PC y navegador. El proyecto prioriza el rendimiento, la accesibilidad y un sistema de diseño consistente.
+**Arkad Games** es una plataforma web de alto rendimiento diseñada para entusiastas del gaming. Construida con **Next.js 15**, **Tailwind CSS v4** y **Supabase**, ofrece una experiencia inmersiva, rápida y profesional para descubrir y jugar títulos gratuitos y clásicos.
 
 ---
 
-## Características Principales
+## 🚀 Características Principales
 
-- **Arquitectura de Servidor**: Implementación con Next.js 15 para optimizar el tiempo de carga y el SEO mediante Server Components.
-- **Sistema de Diseño**: Estilizado con Tailwind CSS v4, utilizando variables nativas de CSS para una gestión de temas eficiente.
-- **Interactividad**: Filtros en tiempo real y paginación optimizada para una navegación fluida.
-- **Autenticación**: Integración con Supabase para la gestión segura de perfiles de usuario.
+### 🔴 Integración de DOOM (1993)
+Hemos integrado el legendario **DOOM** utilizando el motor **js-dos v8**. 
+- **Rendimiento Local**: Todos los assets del juego y el motor se sirven localmente desde `/public`, eliminando problemas de CORS y garantizando latencia mínima.
+- **Interfaz Inmersiva**: Pantalla de carga temática con barra de progreso real y estética "brutalista" inspirada en el juego original.
 
----
+### 🎨 Arquitectura de Diseño (Tailwind v4)
+- **Zero Inline Styles**: Eliminación total de estilos en línea en favor de un sistema de diseño basado en utilidades semánticas.
+- **Tokens de Tema**: Uso de variables de diseño centralizadas (`neon-purple`, `neon-blue`, etc.) en `globals.css` para una consistencia visual absoluta.
+- **Componentización**: Clases reutilizables como `.banner-card` y `.badge-neon` para mantener el código DRY.
 
-## Tecnologías Utilizadas
+### 🔍 SEO & Rendimiento Profesional
+- **Metadatos Dinámicos**: Configuración avanzada de OpenGraph, Twitter Cards y JSON-LD.
+- **Indexación Inteligente**: Implementación de `sitemap.ts` y `robots.ts` para una visibilidad óptima en buscadores.
+- **Resiliencia**: Manejo de errores global mediante `error.tsx` y skeletons de carga (`loading.tsx`) para una experiencia de usuario sin fricciones.
 
-| Tecnología | Función | Justificación |
-| :--- | :--- | :--- |
-| **Next.js** | Framework Core | Renderizado eficiente y manejo de rutas escalable. |
-| **Tailwind CSS v4** | Interfaz | Estilos declarativos sin código CSS redundante. |
-| **TypeScript** | Lenguaje | Robustez en el desarrollo y prevención de errores en tiempo de compilación. |
-| **Supabase** | Backend | Solución integral para bases de datos y autenticación. |
-
----
-
-## Estructura del Proyecto
-
-El código está organizado siguiendo principios de modularidad:
-
-- `src/app`: Definición de rutas y lógica de componentes de servidor.
-- `src/components/ui`: Componentes de interfaz reutilizables.
-- `src/components/layout`: Componentes globales de estructura (Navbar, Footer).
-- `src/context`: Manejo del estado global de la aplicación.
-- `src/lib`: Lógica de integración con APIs y utilidades de terceros.
+### 🎮 Mini-juegos & Catálogo
+- **Cyber Pong**: Un juego de Pong moderno con física personalizada y diseño cyberpunk.
+- **Catálogo de Juegos**: Integración con APIs externas para ofrecer cientos de títulos gratuitos con filtros avanzados.
 
 ---
 
-## Instalación y Desarrollo
+## 🛠️ Stack Tecnológico
 
-### 1. Requisitos Previos
-Clona el repositorio e instala las dependencias:
-```bash
-git clone https://github.com/borosdemir/arkad-games.git
-cd arkad-games
-npm install
-```
-
-### 2. Variables de Entorno
-Configura un archivo `.env.local` con las credenciales de tu proyecto Supabase:
-```env
-NEXT_PUBLIC_SUPABASE_URL=tu_url
-NEXT_PUBLIC_SUPABASE_ANON_KEY=tu_key
-```
-
-### 3. Ejecución
-Inicia el servidor de desarrollo:
-```bash
-npm run dev
-```
+- **Frontend**: Next.js 15 (App Router), React 19, TypeScript.
+- **Estilos**: Tailwind CSS v4.
+- **Backend/Auth**: Supabase.
+- **Emulación**: js-dos v8 (WASM).
+- **Despliegue**: Vercel.
 
 ---
 
-## Estándares de Código
+## 📦 Instalación y Desarrollo
 
-Para asegurar la mantenibilidad del proyecto, seguimos estos criterios:
-1. **Tokens de Diseño**: Se prohíbe el uso de estilos en línea o valores arbitrarios en el TSX; todo debe referenciar al tema central.
-2. **Separación de Lógica**: Los componentes de cliente se mantienen ligeros, delegando la carga de datos al servidor siempre que sea posible.
-3. **Documentación Técnica**: Cada módulo crítico incluye comentarios sobre su propósito y funcionamiento interno.
+1. **Clonar el repositorio:**
+   ```bash
+   git clone https://github.com/borosdemir/arkad-games.git
+   ```
+
+2. **Instalar dependencias:**
+   ```bash
+   npm install
+   ```
+
+3. **Configurar variables de entorno:**
+   Crea un archivo `.env.local` con tus credenciales de Supabase.
+
+4. **Ejecutar en desarrollo:**
+   ```bash
+   npm run dev
+   ```
+
+---
+
+## 📜 Estándares de Código
+
+Para mantener la calidad del proyecto, seguimos estos principios:
+- **Modularidad**: Componentes pequeños y con una sola responsabilidad.
+- **Tipado Estricto**: Uso riguroso de TypeScript para evitar errores en runtime.
+- **Diseño Atómico**: Los estilos deben vivir en Tailwind o en el sistema de diseño centralizado.
+
+---
+
+Desarrollado con ❤️ para la comunidad gamer por **Arkad Team**.

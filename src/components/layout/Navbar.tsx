@@ -17,6 +17,7 @@ const NAV_LINKS = [
   { label: "Catálogo", href: "/catalogo", icon: "" },
   { label: "Géneros", href: "/generos", icon: "" },
   { label: "Cyber Pong", href: "/minijuego", icon: "🏓", special: true },
+  { label: "Doom", href: "/doom", icon: "🔫", special: true },
   { label: "Torneos", href: "/torneos", icon: "" },
 ];
 
@@ -214,7 +215,7 @@ export default function Navbar() {
                 <Link
                   href="/registro"
                   onClick={() => setMenuOpen(false)}
-                  className="rounded-full bg-[#b026ff] px-4 py-2 text-center text-sm font-semibold text-white"
+                  className="rounded-full bg-neon-purple px-4 py-2 text-center text-sm font-semibold text-white"
                 >
                   Registrarse
                 </Link>
