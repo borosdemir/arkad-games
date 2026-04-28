@@ -1,71 +1,104 @@
-# 🕹️ Arkad Games — Plataforma de Juegos Retro & Modernos
+<div align="center">
 
-**Arkad Games** es una plataforma web de alto rendimiento diseñada para entusiastas del gaming. Construida con **Next.js 15**, **Tailwind CSS v4** y **Supabase**, ofrece una experiencia inmersiva, rápida y profesional para descubrir y jugar títulos gratuitos y clásicos.
+# 🕹️ ARKAD GAMES
+### *La Última Frontera del Gaming Retro & Moderno*
+
+[![Next.js](https://img.shields.io/badge/Next.js-15-black?style=for-the-badge&logo=next.js&logoColor=white&labelColor=b026ff)](https://nextjs.org/)
+[![Tailwind CSS](https://img.shields.io/badge/Tailwind-v4-black?style=for-the-badge&logo=tailwind-css&logoColor=white&labelColor=00f0ff)](https://tailwindcss.com/)
+[![Supabase](https://img.shields.io/badge/Supabase-DB-black?style=for-the-badge&logo=supabase&logoColor=white&labelColor=ff00ea)](https://supabase.com/)
+[![License](https://img.shields.io/badge/License-MIT-black?style=for-the-badge&labelColor=333)](LICENSE)
 
 ---
 
-## 🚀 Características Principales
+**Arkad Games** es una plataforma de alto rendimiento diseñada para la nueva era del gaming en el navegador. Fusionamos la nostalgia de los clásicos con la potencia de las tecnologías web modernas para ofrecer una experiencia fluida, inmersiva y visualmente impactante.
 
-### 🔴 Integración de DOOM (1993)
-Hemos integrado el legendario **DOOM** utilizando el motor **js-dos v8**. 
-- **Rendimiento Local**: Todos los assets del juego y el motor se sirven localmente desde `/public`, eliminando problemas de CORS y garantizando latencia mínima.
-- **Interfaz Inmersiva**: Pantalla de carga temática con barra de progreso real y estética "brutalista" inspirada en el juego original.
+[**Explorar Catálogo**](https://arkad-games.vercel.app/catalogo) • [**Jugar Doom**](https://arkad-games.vercel.app/doom) • [**Mini-juegos**](https://arkad-games.vercel.app/minijuego)
 
-### 🎨 Arquitectura de Diseño (Tailwind v4)
-- **Zero Inline Styles**: Eliminación total de estilos en línea en favor de un sistema de diseño basado en utilidades semánticas.
-- **Tokens de Tema**: Uso de variables de diseño centralizadas (`neon-purple`, `neon-blue`, etc.) en `globals.css` para una consistencia visual absoluta.
-- **Componentización**: Clases reutilizables como `.banner-card` y `.badge-neon` para mantener el código DRY.
+</div>
 
-### 🔍 SEO & Rendimiento Profesional
-- **Metadatos Dinámicos**: Configuración avanzada de OpenGraph, Twitter Cards y JSON-LD.
-- **Indexación Inteligente**: Implementación de `sitemap.ts` y `robots.ts` para una visibilidad óptima en buscadores.
-- **Resiliencia**: Manejo de errores global mediante `error.tsx` y skeletons de carga (`loading.tsx`) para una experiencia de usuario sin fricciones.
+## 🌌 Visión General
 
-### 🎮 Mini-juegos & Catálogo
-- **Cyber Pong**: Un juego de Pong moderno con física personalizada y diseño cyberpunk.
-- **Catálogo de Juegos**: Integración con APIs externas para ofrecer cientos de títulos gratuitos con filtros avanzados.
+Arkad Games no es solo un sitio de juegos; es un ecosistema diseñado bajo los estándares más exigentes de la industria. Cada píxel ha sido optimizado para ofrecer una estética **Cyberpunk** coherente, utilizando una paleta de colores neón y animaciones fluidas que garantizan una retención de usuario excepcional.
+
+---
+
+## 🚀 Características Premium
+
+### 🔗 Integración de DOOM Legacy
+Revive el clásico de 1993 con una implementación técnica de vanguardia.
+- **WASM Engine**: Utiliza `js-dos v8` para una emulación perfecta.
+- **Zero Latency**: Assets servidos localmente para evitar cuellos de botella externos.
+- **Brutalist UI**: Pantalla de carga personalizada con estética retro-futurista.
+
+### 🎨 Design System (Neon Framework)
+Basado en **Tailwind CSS v4**, nuestro sistema de diseño define la identidad visual de la marca:
+- **Neon Purple (#b026ff)**: Nuestra firma de energía.
+- **Neon Blue (#00f0ff)**: Claridad y tecnología.
+- **Glassmorphism**: Interfaces translúcidas que aportan profundidad.
+
+### ⚡ Rendimiento & SEO de Élite
+- **Server-Side Rendering**: Tiempos de carga ultra-rápidos con Next.js 15.
+- **SEO Dinámico**: Implementación avanzada de JSON-LD y Meta-tags para máxima visibilidad.
+- **UX Adaptativo**: Diseñado primero para dispositivos móviles, escalable a monitores ultra-wide.
 
 ---
 
 ## 🛠️ Stack Tecnológico
 
-- **Frontend**: Next.js 15 (App Router), React 19, TypeScript.
-- **Estilos**: Tailwind CSS v4.
-- **Backend/Auth**: Supabase.
-- **Emulación**: js-dos v8 (WASM).
-- **Despliegue**: Vercel.
+| Tecnología | Propósito |
+| :--- | :--- |
+| **Next.js 15** | Framework React de alto rendimiento |
+| **TypeScript** | Robustez y tipado estricto |
+| **Tailwind v4** | Estilizado atómico y moderno |
+| **Supabase** | Backend as a Service y Autenticación |
+| **js-dos** | Emulación DOS mediante WebAssembly |
 
 ---
 
-## 📦 Instalación y Desarrollo
+## 📦 Guía de Inicio Rápido
 
-1. **Clonar el repositorio:**
+### Requisitos Previos
+- Node.js 18.x o superior
+- npm o yarn
+
+### Instalación
+
+1. **Clonar y Acceder:**
    ```bash
    git clone https://github.com/borosdemir/arkad-games.git
+   cd arkad-games
    ```
 
-2. **Instalar dependencias:**
+2. **Desplegar Dependencias:**
    ```bash
    npm install
    ```
 
-3. **Configurar variables de entorno:**
-   Crea un archivo `.env.local` con tus credenciales de Supabase.
+3. **Configuración de Entorno:**
+   Copia el archivo `.env.example` a `.env.local` y añade tus claves de Supabase.
 
-4. **Ejecutar en desarrollo:**
+4. **Lanzamiento:**
    ```bash
    npm run dev
    ```
+   > Accede a `http://localhost:3000` para ver la magia.
 
 ---
 
-## 📜 Estándares de Código
+## 📜 Filosofía de Desarrollo
 
-Para mantener la calidad del proyecto, seguimos estos principios:
-- **Modularidad**: Componentes pequeños y con una sola responsabilidad.
-- **Tipado Estricto**: Uso riguroso de TypeScript para evitar errores en runtime.
-- **Diseño Atómico**: Los estilos deben vivir en Tailwind o en el sistema de diseño centralizado.
+Mantenemos un estándar de código **"Limpio y Performante"**:
+- **Modularidad**: Componentes atómicos e independientes.
+- **Optimización de Assets**: Imágenes de próxima generación (WebP/AVIF).
+- **Accesibilidad**: Cumplimiento de estándares WCAG para un gaming inclusivo.
 
 ---
 
-Desarrollado con ❤️ para la comunidad gamer por **Arkad Team**.
+<div align="center">
+
+Desarrollado con pasión por **Arkad Team** 🕹️
+*Transformando la forma en que el mundo juega.*
+
+</div>
+ 
+ 

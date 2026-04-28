@@ -32,3 +32,5 @@ export const isSupabaseConfigured =
 export const supabase: SupabaseClient | null = isSupabaseConfigured
   ? createClient(supabaseUrl, supabaseAnonKey)
   : null;
+ 
+ 
